@@ -21,6 +21,69 @@ class HeaderPageTxt(models.Model):
     def __str__(self):
         return 'Headerpage texts'
 
+class MainPageTxt(models.Model):
+    # without account texts
+    main_page_without_account_title_txt_de = models.CharField(max_length=50)
+    main_page_without_account_title_txt_pl = models.CharField(max_length=50)
+    main_page_without_account_benefit_1_txt_de = models.CharField(max_length=150)
+    main_page_without_account_benefit_1_txt_pl = models.CharField(max_length=150)
+    main_page_without_account_benefit_2_txt_de = models.CharField(max_length=150)
+    main_page_without_account_benefit_2_txt_pl = models.CharField(max_length=150)
+    main_page_without_account_benefit_3_txt_de = models.CharField(max_length=150)
+    main_page_without_account_benefit_3_txt_pl = models.CharField(max_length=150)
+    # with account texts
+    main_page_with_account_title_txt_de = models.CharField(max_length=50)
+    main_page_with_account_title_txt_pl = models.CharField(max_length=50)
+    main_page_with_account_benefit_1_txt_de = models.CharField(max_length=150)
+    main_page_with_account_benefit_1_txt_pl = models.CharField(max_length=150)
+    main_page_with_account_benefit_2_txt_de = models.CharField(max_length=150)
+    main_page_with_account_benefit_2_txt_pl = models.CharField(max_length=150)
+    main_page_with_account_benefit_3_txt_de = models.CharField(max_length=150)
+    main_page_with_account_benefit_3_txt_pl = models.CharField(max_length=150)
+    main_page_with_account_benefit_4_txt_de = models.CharField(max_length=150)
+    main_page_with_account_benefit_4_txt_pl = models.CharField(max_length=150)
+    main_page_with_account_benefit_5_txt_de = models.CharField(max_length=150)
+    main_page_with_account_benefit_5_txt_pl = models.CharField(max_length=150)
+    # button texts
+    main_page_without_account_single_question_btn_txt_de = models.CharField(max_length=30)
+    main_page_without_account_single_question_btn_txt_pl = models.CharField(max_length=30)
+    main_page_without_account_full_test_btn_txt_de = models.CharField(max_length=30)
+    main_page_without_account_full_test_btn_txt_pl = models.CharField(max_length=30)
+    main_page_with_account_make_account_btn_txt_de = models.CharField(max_length=30)
+    main_page_with_account_make_account_btn_txt_pl = models.CharField(max_length=30)
+    main_page_with_account_login_btn_txt_de = models.CharField(max_length=30)
+    main_page_with_account_login_btn_txt_pl = models.CharField(max_length=30)
+    # benefits
+    main_page_benefit_1_main_txt_de = models.CharField(max_length=50)
+    main_page_benefit_1_main_txt_pl = models.CharField(max_length=50)
+    main_page_benefit_1_under_txt_de = models.CharField(max_length=100)
+    main_page_benefit_1_under_txt_pl = models.CharField(max_length=100)
+    main_page_benefit_2_main_txt_de = models.CharField(max_length=50)
+    main_page_benefit_2_main_txt_pl = models.CharField(max_length=50)
+    main_page_benefit_2_under_txt_de = models.CharField(max_length=100)
+    main_page_benefit_2_under_txt_pl = models.CharField(max_length=100)
+    main_page_benefit_3_main_txt_de = models.CharField(max_length=50)
+    main_page_benefit_3_main_txt_pl = models.CharField(max_length=50)
+    main_page_benefit_3_under_txt_de = models.CharField(max_length=100)
+    main_page_benefit_3_under_txt_pl = models.CharField(max_length=100)
+    # about me footer
+    main_page_about_me_title_txt_de = models.CharField(max_length=30)
+    main_page_about_me_title_txt_pl = models.CharField(max_length=30)
+    main_page_about_me_text_txt_de = models.CharField(max_length=500)
+    main_page_about_me_text_txt_pl = models.CharField(max_length=500)
+
+    def __str__(self):
+        return 'Mainpage texts'
+
+
+
+
+
+
+
+
+
+
 
 
 
