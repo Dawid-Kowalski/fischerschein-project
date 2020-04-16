@@ -1,4 +1,61 @@
 {% extends 'base.html' %}
 {% block content %}
-    <p>simple question</p>
+    <div class='text-center m-2 p-2 account-bg'>
+        <button class='btn btn-secondary' type='button' id='draw-new-question-btn'><i class='far fa-file'></i> {{ question_page_new_question_btn_txt_de }}</button>
+        <button class='btn btn-secondary' type='button' id='check-question-btn'><i class='fas fa-tasks'></i> {{ question_page_check_question_btn_txt_de }}</button>
+        <p>
+            <span class='font-weight-bold'>{{ question_page_topic_txt_de }}:</span>
+            <span id='main-topic-ger'>...</span>
+            <span id='main-topic-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span><br>
+            <span class='font-weight-bold'>{{ question_page_under_topic_txt_de }}:</span>
+            <span id='under-topic-ger'>...</span>
+            <span id='under-topic-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+        </p>
+    </div>
+    <div class='account-bg m-2 p-2'>
+        <div class='text-center'>
+            <p>{{ question_page_question_header_txt_de }}:
+                <span id='question-id'>
+                    ...
+                </span>
+            </p>
+            <p>
+                <span id='question-ger'>
+                    ...
+                </span>
+                <span id='question-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'>
+                    <span class='flag-icon flag-icon-pl'></span>
+                </span>
+            </p>
+        </div>
+        <div class='container'>
+            <div class='form-check'>
+                <div class='col-6 offset-3'>
+                    <input class='form-check-input' type='radio' name='answers' id='answer-A'>
+                    <label class='form-check-label' for='answer-A' id='answer-A-label'>
+                        ...
+                    </label>
+                    <span id='answer-A-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+                </div>
+            </div>
+            <div class='form-check'>
+                <div class='col-6 offset-3'>
+                    <input class='form-check-input' type='radio' name='answers' id='answer-B'>
+                    <label class='form-check-label' for='answer-B' id='answer-B-label'>
+                        ...
+                    </label>
+                    <span id='answer-B-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+                </div>
+            </div>
+            <div class='form-check'>
+                <div class='col-6 offset-3'>
+                    <input class='form-check-input' type='radio' name='answers' id='answer-C'>
+                    <label class='form-check-label' for='answer-C' id='answer-C-label'>
+                        ...
+                    </label>
+                    <span id='answer-C-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
