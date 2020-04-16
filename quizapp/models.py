@@ -75,6 +75,36 @@ class MainPageTxt(models.Model):
     def __str__(self):
         return 'Mainpage texts'
 
+class QuestionPageTxt(models.Model):
+    # buttons texts
+    question_page_new_question_btn_txt_de = models.CharField(max_length=30)
+    question_page_new_question_btn_txt_pl = models.CharField(max_length=30)
+    question_page_check_question_btn_txt_de = models.CharField(max_length=30)
+    question_page_check_question_btn_txt_pl = models.CharField(max_length=30)
+    # topics texts
+    question_page_topic_txt_de = models.CharField(max_length=30)
+    question_page_topic_txt_pl = models.CharField(max_length=30)
+    question_page_under_topic_txt_de = models.CharField(max_length=30)
+    question_page_under_topic_txt_pl = models.CharField(max_length=30)
+    # quetion text
+    question_page_question_header_txt_de = models.CharField(max_length=30)
+    question_page_question_header_txt_pl = models.CharField(max_length=30)
+    # modal texts
+    question_page_modal_title_txt_de = models.CharField(max_length=30)
+    question_page_modal_title_txt_pl = models.CharField(max_length=30)
+    # modal buttons
+    question_page_modal_try_again_btn_txt_de = models.CharField(max_length=30)
+    question_page_modal_try_again_btn_txt_pl = models.CharField(max_length=30)
+    question_page_modal_correct_answer_btn_txt_de = models.CharField(max_length=30)
+    question_page_modal_correct_answer_btn_txt_pl = models.CharField(max_length=30)
+    question_page_modal_new_question_btn_txt_de = models.CharField(max_length=30)
+    question_page_modal_new_question_btn_txt_pl = models.CharField(max_length=30)
+
+    def __str__(self):
+        return 'Question page texts'
+
+
+
 
 
 
