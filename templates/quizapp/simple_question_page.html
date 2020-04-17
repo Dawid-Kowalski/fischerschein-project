@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
     <div class='text-center m-2 p-2 account-bg'>
+        <h6 data-translate-flag='true'>aby uzyskać tłumaczenie na język polski najedź myszką na ikonę: <span class='flag-icon flag-icon-pl'></span> znajdującą się obok pytania lub odpowiedzi</h6>
         <button class='btn btn-secondary' type='button' id='draw-new-question-btn'><i class='far fa-file'></i> {{ question_page_new_question_btn_txt_de }}</button>
         <button class='btn btn-secondary' type='button' id='check-question-btn'><i class='fas fa-tasks'></i> {{ question_page_check_question_btn_txt_de }}</button>
         <p>
             <span class='font-weight-bold'>{{ question_page_topic_txt_de }}:</span>
-            <span id='main-topic-ger'>...</span>
+            <span id='main-topic-de'>...</span>
             <span id='main-topic-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span><br>
             <span class='font-weight-bold'>{{ question_page_under_topic_txt_de }}:</span>
-            <span id='under-topic-ger'>...</span>
+            <span id='under-topic-de'>...</span>
             <span id='under-topic-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
         </p>
     </div>
@@ -20,7 +22,7 @@
                 </span>
             </p>
             <p>
-                <span id='question-ger'>
+                <span id='question-de'>
                     ...
                 </span>
                 <span id='question-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'>
@@ -58,4 +60,31 @@
             </div>
         </div>
     </div>
+
+    <div class='modal fade' id='check-question-modal' tabindex="-1" role='dialog' aria-labelledby='check-question-label' aria-hidden='true'>
+        <div class='modal-dialog modal-xl' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <h5 class='modal-title' id='check-question-label'>{{ question_page_modal_title_txt_de }}</h5>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class='modal-body'>
+                    <p id='check-result-modal-body'></p>
+                    <p id='correct-answer-modal-body'></p>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-copy'></i> {{ question_page_modal_try_again_btn_txt_de }}</button>
+                    <button id='modal-correct-answer-btn' type='button' class='btn btn-secondary'><i class='far fa-check-circle'></i>{{ question_page_modal_correct_answer_btn_txt_de }}</button>
+                    <button id='modal-new-question-btn' type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-file'></i> {{ question_page_modal_new_question_btn_txt_de }}</button>
+                </div>
+             </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    {% include "js_data_wrapped_in_html.html" %} <!-- in templates folder-->
+    <script type='text/javascript' src='{% static "js/simple_question/simple_question_functions.js" %}'></script>
 {% endblock %}

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import HeaderPageTxt, MainPageTxt, QuestionPageTxt
+from .models import HeaderPageTxt, MainPageTxt, QuestionPageTxt, Question
 
 header_txt = HeaderPageTxt.objects.all()[:1]
 header_data = {}
@@ -82,6 +82,10 @@ def main_page(request):
 
 def simple_question(request):
 
+    question_data = {}
+    all_questions = Question.objects.all()
+    question_data['all_questions'] = all_questions
+
     question_page_txt = QuestionPageTxt.objects.all()[:1]
     question_page_data = {}
 
@@ -109,6 +113,6 @@ def simple_question(request):
     question_page_data['question_page_modal_new_question_btn_txt_de'] = question_page_txt[0].question_page_modal_new_question_btn_txt_de
     question_page_data['question_page_modal_new_question_btn_txt_pl'] = question_page_txt[0].question_page_modal_new_question_btn_txt_pl
 
-    context = {**header_data,**question_page_data}
+    context = {**question_data,**header_data,**question_page_data}
 
     return render(request,'quizapp/simple_question_page.html',context)
