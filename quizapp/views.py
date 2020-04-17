@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import HeaderPageTxt, MainPageTxt, QuestionPageTxt, Question
+from .models import HeaderPageTxt, MainPageTxt, QuestionPageTxt, Question, TestPageTxt
 
 header_txt = HeaderPageTxt.objects.all()[:1]
 header_data = {}
@@ -118,6 +118,60 @@ def simple_question(request):
     return render(request,'quizapp/simple_question_page.html',context)
 
 def full_test(request):
-    context = {**header_data}
+    test_page_txt = TestPageTxt.objects.all()[:1]
+    test_page_data = {}
+
+    #buttons texts
+    test_page_data['test_page_new_test_btn_txt_de'] = test_page_txt[0].test_page_new_test_btn_txt_de
+    test_page_data['test_page_new_test_btn_txt_pl'] = test_page_txt[0].test_page_new_test_btn_txt_pl
+    test_page_data['test_page_check_test_btn_txt_de'] = test_page_txt[0].test_page_check_test_btn_txt_de
+    test_page_data['test_page_check_test_btn_txt_pl'] = test_page_txt[0].test_page_check_test_btn_txt_pl
+    test_page_data['test_page_test_info_btn_txt_de'] = test_page_txt[0].test_page_test_info_btn_txt_de
+    test_page_data['test_page_test_info_btn_txt_pl'] = test_page_txt[0].test_page_test_info_btn_txt_pl
+    # other questions text
+    test_page_data['test_page_other_question_txt_de'] = test_page_txt[0].test_page_other_question_txt_de
+    test_page_data['test_page_other_question_txt_pl'] = test_page_txt[0].test_page_other_question_txt_pl
+    #other topic buttons texts
+    test_page_data['test_page_ichtyology_btn_txt_de'] = test_page_txt[0].test_page_ichtyology_btn_txt_de
+    test_page_data['test_page_ichtyology_btn_txt_pl'] = test_page_txt[0].test_page_ichtyology_btn_txt_pl
+    test_page_data['test_page_maintenace_of_fish_water_btn_txt_de'] = test_page_txt[0].test_page_maintenace_of_fish_water_btn_txt_de
+    test_page_data['test_page_maintenace_of_fish_water_btn_txt_pl'] = test_page_txt[0].test_page_maintenace_of_fish_water_btn_txt_pl
+    test_page_data['test_page_fishing_gear_btn_txt_de'] = test_page_txt[0].test_page_fishing_gear_btn_txt_de
+    test_page_data['test_page_fishing_gear_btn_txt_pl'] = test_page_txt[0].test_page_fishing_gear_btn_txt_pl
+    test_page_data['test_page_treatment_of_cathing_fish_btn_txt_de'] = test_page_txt[0].test_page_treatment_of_cathing_fish_btn_txt_de
+    test_page_data['test_page_treatment_of_cathing_fish_btn_txt_pl'] = test_page_txt[0].test_page_treatment_of_cathing_fish_btn_txt_pl
+    test_page_data['test_page_relevant_legislation_btn_txt_de'] = test_page_txt[0].test_page_relevant_legislation_btn_txt_de
+    test_page_data['test_page_relevant_legislation_btn_txt_pl'] = test_page_txt[0].test_page_relevant_legislation_btn_txt_pl
+    #modal results texts
+    test_page_data['test_page_modal_results_title_btn_txt_de'] = test_page_txt[0].test_page_modal_results_title_btn_txt_de
+    test_page_data['test_page_modal_results_title_btn_txt_pl'] = test_page_txt[0].test_page_modal_results_title_btn_txt_pl
+    test_page_data['test_page_modal_results_correct_answer_txt_de'] = test_page_txt[0].test_page_modal_results_correct_answer_txt_de
+    test_page_data['test_page_modal_results_correct_answer_txt_pl'] = test_page_txt[0].test_page_modal_results_correct_answer_txt_pl
+    # modal results topi texts
+    test_page_data['test_page_modal_ichtyology_txt_de'] = test_page_txt[0].test_page_modal_ichtyology_txt_de
+    test_page_data['test_page_modal_ichtyology_txt_pl'] = test_page_txt[0].test_page_modal_ichtyology_txt_pl
+    test_page_data['test_page_modal_maintenace_of_fish_water_txt_de'] = test_page_txt[0].test_page_modal_maintenace_of_fish_water_txt_de
+    test_page_data['test_page_modal_maintenace_of_fish_water_txt_pl'] = test_page_txt[0].test_page_modal_maintenace_of_fish_water_txt_pl
+    test_page_data['test_page_modal_fishing_gear_txt_de'] = test_page_txt[0].test_page_modal_fishing_gear_txt_de
+    test_page_data['test_page_modal_fishing_gear_txt_pl'] = test_page_txt[0].test_page_modal_fishing_gear_txt_pl
+    test_page_data['test_page_modal_treatment_of_cathing_fish_txt_de'] = test_page_txt[0].test_page_modal_treatment_of_cathing_fish_txt_de
+    test_page_data['test_page_modal_treatment_of_cathing_fish_txt_pl'] = test_page_txt[0].test_page_modal_treatment_of_cathing_fish_txt_pl
+    test_page_data['test_page_modal_relevant_legislation_txt_de'] = test_page_txt[0].test_page_modal_relevant_legislation_txt_de
+    test_page_data['test_page_modal_relevant_legislation_txt_pl'] = test_page_txt[0].test_page_modal_relevant_legislation_txt_pl
+    # modal results buttons
+    test_page_data['test_page_modal_try_again_btn_txt_de'] = test_page_txt[0].test_page_modal_try_again_btn_txt_de
+    test_page_data['test_page_modal_try_again_btn_txt_pl'] = test_page_txt[0].test_page_modal_try_again_btn_txt_pl
+    test_page_data['test_page_modal_new_test_btn_txt_de'] = test_page_txt[0].test_page_modal_new_test_btn_txt_de
+    test_page_data['test_page_modal_new_test_btn_txt_pl'] = test_page_txt[0].test_page_modal_new_test_btn_txt_pl
+    # modal test info texts
+    test_page_data['test_page_modal_test_info_title_txt_de'] = test_page_txt[0].test_page_modal_test_info_title_txt_de
+    test_page_data['test_page_modal_test_info_title_txt_pl'] = test_page_txt[0].test_page_modal_test_info_title_txt_pl
+    test_page_data['test_page_modal_test_info_text_txt_de'] = test_page_txt[0].test_page_modal_test_info_text_txt_de
+    test_page_data['test_page_modal_test_info_text_txt_pl'] = test_page_txt[0].test_page_modal_test_info_text_txt_pl
+    # modal test info buttons
+    test_page_data['test_page_modal_test_info_close_btn_txt_de'] = test_page_txt[0].test_page_modal_test_info_close_btn_txt_de
+    test_page_data['test_page_modal_test_info_close_btn_txt_pl'] = test_page_txt[0].test_page_modal_test_info_close_btn_txt_pl
+
+    context = {**header_data,**test_page_data}
 
     return render(request,'quizapp/full_test_page.html',context)
