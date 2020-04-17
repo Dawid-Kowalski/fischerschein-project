@@ -118,6 +118,11 @@ def simple_question(request):
     return render(request,'quizapp/simple_question_page.html',context)
 
 def full_test(request):
+
+    question_data = {}
+    all_questions = Question.objects.all()
+    question_data['all_questions'] = all_questions
+
     test_page_txt = TestPageTxt.objects.all()[:1]
     test_page_data = {}
 
@@ -172,6 +177,6 @@ def full_test(request):
     test_page_data['test_page_modal_test_info_close_btn_txt_de'] = test_page_txt[0].test_page_modal_test_info_close_btn_txt_de
     test_page_data['test_page_modal_test_info_close_btn_txt_pl'] = test_page_txt[0].test_page_modal_test_info_close_btn_txt_pl
 
-    context = {**header_data,**test_page_data}
+    context = {**question_data,**header_data,**test_page_data}
 
     return render(request,'quizapp/full_test_page.html',context)

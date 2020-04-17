@@ -7,23 +7,23 @@
     {% for question in all_questions %}
         nextQuestion = {};
         nextQuestion.questionId = parseInt('{{ question.question_id }}');
-        nextQuestion.mainTopicGer = '{{ question.main_topic_de }}';
+        nextQuestion.mainTopicDe = '{{ question.main_topic_de }}';
         nextQuestion.mainTopicPl = '{{ question.main_topic_pl }}';
-        nextQuestion.underTopicGer = '{{ question.under_topic_de }}';
+        nextQuestion.underTopicDe = '{{ question.under_topic_de }}';
         nextQuestion.underTopicPl = '{{ question.under_topic_pl }}';
-        nextQuestion.questionGer = '{{ question.question_de }}';
+        nextQuestion.questionDe = '{{ question.question_de }}';
         nextQuestion.questionPl = '{{ question.question_pl }}';
-        answersGer = [];
-        answersGer.push('{{ question.answer_a_de }}');
-        answersGer.push('{{ question.answer_b_de }}');
-        answersGer.push('{{ question.answer_c_de }}');
+        answersDe = [];
+        answersDe.push('{{ question.answer_a_de }}');
+        answersDe.push('{{ question.answer_b_de }}');
+        answersDe.push('{{ question.answer_c_de }}');
         nextQuestion.answersGer = answersGer;
         answersPl = [];
         answersPl.push('{{ question.answer_a_pl }}');
         answersPl.push('{{ question.answer_b_pl }}');
         answersPl.push('{{ question.answer_c_pl }}');
         nextQuestion.answersPl = answersPl;
-        nextQuestion.correctAnswerGer = '{{ question.correct_answer_de }}';
+        nextQuestion.correctAnswerDe = '{{ question.correct_answer_de }}';
         questions.push(nextQuestion);
     {% endfor %}
 

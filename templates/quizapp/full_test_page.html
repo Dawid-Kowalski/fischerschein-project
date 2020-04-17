@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <div class='text-center m-2 p-2 account-bg'>
     <h6 data-translate-flag='true'>aby uzyskać tłumaczenie na język polski najedź myszką na ikonę: <span class='flag-icon flag-icon-pl'></span> znajdującą się obok pytania lub odpowiedzi</h6>
@@ -30,4 +31,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block javascript %}
+    {% include "js_data_wrapped_in_html.html" %} <!-- in templates folder-->
+    <script type='text/javascript' src='{% static "js/full_test/full_test_functions.js" %}'></script>
 {% endblock %}
