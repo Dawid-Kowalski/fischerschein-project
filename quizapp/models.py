@@ -197,6 +197,60 @@ class Question(models.Model):
     class Meta:
         ordering = ('question_id',)
 
+class TestPageTxt(models.Model):
+    #buttons texts
+    test_page_new_test_btn_txt_de = models.CharField(max_length=30)
+    test_page_new_test_btn_txt_pl = models.CharField(max_length=30)
+    test_page_check_test_btn_txt_de = models.CharField(max_length=30)
+    test_page_check_test_btn_txt_pl = models.CharField(max_length=30)
+    test_page_test_info_btn_txt_de = models.CharField(max_length=30)
+    test_page_test_info_btn_txt_pl = models.CharField(max_length=30)
+    # other questions text
+    test_page_other_question_txt_pl = models.CharField(max_length=80)
+    #other topic buttons texts
+    test_page_ichtyology_btn_txt_de = models.CharField(max_length=50)
+    test_page_ichtyology_btn_txt_pl = models.CharField(max_length=50)
+    test_page_maintenace_of_fish_water_btn_txt_de = models.CharField(max_length=50)
+    test_page_maintenace_of_fish_water_btn_txt_pl = models.CharField(max_length=50)
+    test_page_fishing_gear_btn_txt_de = models.CharField(max_length=50)
+    test_page_fishing_gear_btn_txt_pl = models.CharField(max_length=50)
+    test_page_treatment_of_cathing_fish_btn_txt_de = models.CharField(max_length=50)
+    test_page_treatment_of_cathing_fish_btn_txt_pl = models.CharField(max_length=50)
+    test_page_relevant_legislation_btn_txt_de = models.CharField(max_length=50)
+    test_page_relevant_legislation_btn_txt_pl = models.CharField(max_length=50)
+    #modal results texts
+    test_page_modal_results_title_btn_txt_de = models.CharField(max_length=30)
+    test_page_modal_results_title_btn_txt_de = models.CharField(max_length=30)
+    test_page_modal_results_correct_answer_txt_de = models.CharField(max_length=30)
+    test_page_modal_results_correct_answer_txt_pl = models.CharField(max_length=30)
+    # modal results topi texts
+    test_page_modal_ichtyology_txt_de = models.CharField(max_length=50)
+    test_page_modal_ichtyology_txt_pl = models.CharField(max_length=50)
+    test_page_modal_maintenace_of_fish_water_txt_de = models.CharField(max_length=50)
+    test_page_modal_maintenace_of_fish_water_txt_pl = models.CharField(max_length=50)
+    test_page_modal_fishing_gear_txt_de = models.CharField(max_length=50)
+    test_page_modal_fishing_gear_txt_pl = models.CharField(max_length=50)
+    test_page_modal_treatment_of_cathing_fish_txt_de = models.CharField(max_length=50)
+    test_page_modal_treatment_of_cathing_fish_txt_pl = models.CharField(max_length=50)
+    test_page_modal_relevant_legislation_txt_de = models.CharField(max_length=50)
+    test_page_modal_relevant_legislation_txt_pl = models.CharField(max_length=50) 
+    # modal buttons
+    test_page_modal_try_again_btn_txt_de = models.CharField(max_length=30)
+    test_page_modal_try_again_btn_txt_pl = models.CharField(max_length=30)
+    test_page_modal_new_test_btn_txt_de = models.CharField(max_length=30)
+    test_page_modal_new_test_btn_txt_pl = models.CharField(max_length=30)
+
+    def __str__(self):
+        return 'Test page texts'
+
+
+
+
+
+
+
+
+
 
 
 
