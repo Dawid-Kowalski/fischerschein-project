@@ -116,3 +116,8 @@ def simple_question(request):
     context = {**question_data,**header_data,**question_page_data}
 
     return render(request,'quizapp/simple_question_page.html',context)
+
+def full_test(request):
+    context = {**header_data}
+
+    return render(request,'quizapp/full_test_page.html',context)
