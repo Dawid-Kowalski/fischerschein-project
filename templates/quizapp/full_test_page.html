@@ -6,4 +6,28 @@
     <button class='btn btn-secondary' type='button' id='check-test-btn'><i class="fas fa-tasks"></i> {{ test_page_check_test_btn_txt_de }}</button>
     <button class='btn btn-secondary' type='button' data-toggle="modal" data-target='#test-info-modal' id='check-test-btn'><i class="fas fa-info"></i> {{ test_page_test_info_btn_txt_de }}</button>
 </div>
+<div>
+    <div class='form-check account-bg mx-2 my-2 py-2' data-topic='' style='display:block;'>
+        <p>
+            <span id='question-nr'>..nr..</span>
+            <span id='question-de'>..question..</span>
+            <span class='flag-icon flag-icon-pl m-1' data-toggle='tooltip' data-placement='top' data-translate-flag='true' id='question-pl' data-original-title='' title=''></span>
+        </p>
+        <div class='form-check'>
+            <input type='radio' value='...' class='form-check-input' name='answer-1'>
+            <label class='form-check-label'>..A..</label>
+            <span class='flag-icon flag-icon-pl m-1' data-translate-flag='true' data-toggle='tooltip' data-placement='top' id='answer-1-0' data-original-title='' title=''></span>
+        </div>
+        <div class='form-check'>
+            <input type='radio' value='...' class='form-check-input' name='answer-2'>
+            <label class='form-check-label'>..B..</label>
+            <span class='flag-icon flag-icon-pl m-1' data-translate-flag='true' data-toggle='tooltip' data-placement='top' id='answer-1-1' data-original-title='' title=''></span>
+        </div>
+        <div class='form-check'>
+            <input type='radio' value='...' class='form-check-input' name='answer-3'>
+            <label class='form-check-label'>..C..</label>
+            <span class='flag-icon flag-icon-pl m-1' data-translate-flag='true' data-toggle='tooltip' data-placement='top' id='answer-1-2' data-original-title='' title=''></span>
+        </div>
+    </div>
+</div>
 {% endblock %}
