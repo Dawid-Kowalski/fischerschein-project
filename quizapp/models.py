@@ -206,6 +206,7 @@ class TestPageTxt(models.Model):
     test_page_test_info_btn_txt_de = models.CharField(max_length=30)
     test_page_test_info_btn_txt_pl = models.CharField(max_length=30)
     # other questions text
+    test_page_other_question_txt_de = models.CharField(max_length=80)
     test_page_other_question_txt_pl = models.CharField(max_length=80)
     #other topic buttons texts
     test_page_ichtyology_btn_txt_de = models.CharField(max_length=50)
@@ -220,7 +221,7 @@ class TestPageTxt(models.Model):
     test_page_relevant_legislation_btn_txt_pl = models.CharField(max_length=50)
     #modal results texts
     test_page_modal_results_title_btn_txt_de = models.CharField(max_length=30)
-    test_page_modal_results_title_btn_txt_de = models.CharField(max_length=30)
+    test_page_modal_results_title_btn_txt_pl = models.CharField(max_length=30)
     test_page_modal_results_correct_answer_txt_de = models.CharField(max_length=30)
     test_page_modal_results_correct_answer_txt_pl = models.CharField(max_length=30)
     # modal results topi texts
@@ -234,11 +235,19 @@ class TestPageTxt(models.Model):
     test_page_modal_treatment_of_cathing_fish_txt_pl = models.CharField(max_length=50)
     test_page_modal_relevant_legislation_txt_de = models.CharField(max_length=50)
     test_page_modal_relevant_legislation_txt_pl = models.CharField(max_length=50) 
-    # modal buttons
+    # modal results buttons
     test_page_modal_try_again_btn_txt_de = models.CharField(max_length=30)
     test_page_modal_try_again_btn_txt_pl = models.CharField(max_length=30)
     test_page_modal_new_test_btn_txt_de = models.CharField(max_length=30)
     test_page_modal_new_test_btn_txt_pl = models.CharField(max_length=30)
+    # modal test info texts
+    test_page_modal_test_info_title_txt_de = models.CharField(max_length=30)
+    test_page_modal_test_info_title_txt_pl = models.CharField(max_length=30)
+    test_page_modal_test_info_text_txt_de = models.CharField(max_length=300)
+    test_page_modal_test_info_text_txt_pl = models.CharField(max_length=300)
+    # modal test info buttons
+    test_page_modal_test_info_close_btn_txt_de = models.CharField(max_length=30)
+    test_page_modal_test_info_close_btn_txt_pl = models.CharField(max_length=30)
 
     def __str__(self):
         return 'Test page texts'
