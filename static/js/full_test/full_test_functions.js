@@ -31,6 +31,7 @@ chosseTestQuestionsIds = () => {
 makeSelectedQuestionsData = () => {
     const selectedQuestionIds = chosseTestQuestionsIds().flat(Infinity);
     const allQuestions = makeQuestionsData();
+
     const selectedQuestions = [];
     let newQuestion;
 
@@ -50,9 +51,52 @@ makeSelectedQuestionsData = () => {
     return selectedQuestions;
 }
 
+prepareDataQuestionToTemplate = () => {
+    const questionData = makeSelectedQuestionsData();
+
+    const dataToTemplate = {}
+    dataToTemplate.questions =[];
+    for(let i=0;i<questionData.length;i++){
+        let question = {}
+        let shuffledAnswerIndexs = shuffleQuestionsAnswer();
+
+        question.questionId = i+1;
+        question.mainTopicDe = questionData[i].mainTopicDe;
+        question.questionDe = questionData[i].questionDe;
+        question.questionPl = questionData[i].questionPl;
+        question.answerAde = questionData[i].answersDe[shuffledAnswerIndexs[0]];
+        question.answerBde = questionData[i].answersDe[shuffledAnswerIndexs[1]];
+        question.answerCde = questionData[i].answersDe[shuffledAnswerIndexs[2]];
+        question.answerApl = questionData[i].answersPl[shuffledAnswerIndexs[0]];
+        question.answerBpl = questionData[i].answersPl[shuffledAnswerIndexs[1]];
+        question.answerCpl = questionData[i].answersPl[shuffledAnswerIndexs[2]];
+        question.correctAnswerDe = questionData[i].correctAnswerDe;
+
+        dataToTemplate.questions.push(question);
+    }
+    return dataToTemplate
+}
+
+renderQuestions = () => {
+    const questionTemplate = document.querySelector('#template-question').innerHTML;
+    const data = prepareDataQuestionToTemplate();
+    const rendered = Mustache.render(questionTemplate,data);
+    document.querySelector('#test').innerHTML = rendered;
+}
+
+makeTooltips = () => {
+    const tooltips = document.querySelectorAll("span[data-toggle='tooltip']");
+    
+    for(let i=0;i<tooltips.length;i++){
+        $(function(){
+            $(tooltips[i]).tooltip();
+        })
+    }
+}
+
 prepareTest = () => {
-    const selectedQuestion = makeSelectedQuestionsData();
-    console.log(selectedQuestion);
+    renderQuestions();
+    makeTooltips();
 }
 
 prepareTest()

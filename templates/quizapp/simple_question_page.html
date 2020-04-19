@@ -86,5 +86,6 @@
 
 {% block javascript %}
     {% include "js_data_wrapped_in_html.html" %} <!-- in templates folder-->
+    <script type='text/javascript' src='{% static "js/helpers/helpers_functions.js" %}'></script>
     <script type='text/javascript' src='{% static "js/simple_question/simple_question_functions.js" %}'></script>
 {% endblock %}

@@ -4,12 +4,6 @@ uncheckedRadios = () => {
     document.querySelector('#answer-C').checked = false;
 }
 
-shuffleQuestionsAnswer = () => {
-    const array = [0,1,2];
-    array.sort(()=>Math.random()-0.5);
-    return array;
-}
-
 makeTooltip = (elementToAddTooltip,tooltipText) => {
     $(function(){
         $(`#${elementToAddTooltip}`).tooltip('dispose').tooltip({title:tooltipText}).tooltip();
@@ -18,23 +12,23 @@ makeTooltip = (elementToAddTooltip,tooltipText) => {
 
 prepareQuestion = (question) => {
     document.querySelector('#question-id').textContent = question.questionId;
-    document.querySelector('#main-topic-de').textContent = question.mainTopicGer + ' ';
+    document.querySelector('#main-topic-de').textContent = question.mainTopicDe + ' ';
     makeTooltip('main-topic-pl',question.mainTopicPl);
-    document.querySelector('#under-topic-de').textContent = question.underTopicGer + ' ';
+    document.querySelector('#under-topic-de').textContent = question.underTopicDe + ' ';
     makeTooltip('under-topic-pl',question.underTopicPl);
-    document.querySelector('#question-de').textContent = question.questionGer;
+    document.querySelector('#question-de').textContent = question.questionDe;
     makeTooltip('question-pl',question.questionPl);
 
     const shuffledAnswerIndexs = shuffleQuestionsAnswer(); // returns array 0,1,2 in random order
-    document.querySelector('#answer-A-label').textContent = question.answersGer[shuffledAnswerIndexs[0]];
-    document.querySelector('#answer-B-label').textContent = question.answersGer[shuffledAnswerIndexs[1]];
-    document.querySelector('#answer-C-label').textContent = question.answersGer[shuffledAnswerIndexs[2]];
+    document.querySelector('#answer-A-label').textContent = question.answersDe[shuffledAnswerIndexs[0]];
+    document.querySelector('#answer-B-label').textContent = question.answersDe[shuffledAnswerIndexs[1]];
+    document.querySelector('#answer-C-label').textContent = question.answersDe[shuffledAnswerIndexs[2]];
 
-    document.querySelector('#answer-A').value = question.answersGer[shuffledAnswerIndexs[0]];
+    document.querySelector('#answer-A').value = question.answersDe[shuffledAnswerIndexs[0]];
     makeTooltip('answer-A-pl',question.answersPl[shuffledAnswerIndexs[0]]);
-    document.querySelector('#answer-B').value = question.answersGer[shuffledAnswerIndexs[1]];
+    document.querySelector('#answer-B').value = question.answersDe[shuffledAnswerIndexs[1]];
     makeTooltip('answer-B-pl',question.answersPl[shuffledAnswerIndexs[1]]);
-    document.querySelector('#answer-C').value = question.answersGer[shuffledAnswerIndexs[2]];
+    document.querySelector('#answer-C').value = question.answersDe[shuffledAnswerIndexs[2]];
     makeTooltip('answer-C-pl',question.answersPl[shuffledAnswerIndexs[2]]);
     
     uncheckedRadios();
