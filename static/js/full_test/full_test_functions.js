@@ -117,6 +117,7 @@ prepareTest = () => {
 }
 
 const newTestButton = document.querySelector('#new-test-btn');
+const checkTestButton = document.querySelector('#check-test-btn');
 const showQuestions_1_Button = document.querySelector('#show-topic-1-questions-btn')
 const showQuestions_2_Button = document.querySelector('#show-topic-2-questions-btn')
 const showQuestions_3_Button = document.querySelector('#show-topic-3-questions-btn')
@@ -149,5 +150,79 @@ showQuestions_5_Button.addEventListener('click',function(){
         showQuestionFromTopic('Einschlägige Rechtsvorschriften')
     }
 );
+
+getUserAnswers = () => {
+    let userAnswers = [];
+
+    for(i=0;i<60;i++){
+        try {
+            userAnswers.push(document.querySelector(`input[name="answer-${i+1}"]:checked`).value);
+        }
+        catch (err){
+            userAnswers.push(null);
+        }
+    }
+    return userAnswers;
+}
+
+getCorrectAnswer = (selectedQuestionsGlobal) => {
+    const correctAnswerGer = [];
+
+    for(i=0;i<selectedQuestionsGlobal.length;i++){
+        correctAnswerGer.push(selectedQuestionsGlobal[i].correctAnswerDe);
+    }
+    return correctAnswerGer;
+}
+
+checkTest = () => {
+    const correctAnswerResult = document.querySelector('#correct-answer-result');
+    const fischBuildResults = document.querySelector('#fisch-build-results');
+    const waterProtectionResults = document.querySelector('#water-protection-results');
+    const fischingEquipmentResults = document.querySelector('#fisching-equipment-results');
+    const handlingOfCoughtFishResults = document.querySelector('#handling-of-caught-fish-results');
+    const lawResults = document.querySelector('#law-results');
+   
+    const userAnswers = getUserAnswers();
+    const correctAnswer = getCorrectAnswer(selectedQuestionsGlobal);
+
+    let points = 0;
+    let pointsFischBuild = 0;
+    let pointsWaterProtection = 0;
+    let pointsFishingEquipment = 0;
+    let pointsHandlingOfCouthFish = 0;
+    let pointsLaw = 0;
+
+    for(let i=0;i<userAnswers.length;i++){
+        if(userAnswers[i]==correctAnswer[i]){
+            points++;
+            if(i<=11){
+                pointsFischBuild++;
+            }
+            if(i>11 && i<=23){
+                pointsWaterProtection++;
+            }
+            if(i>23 && i<=35){
+                pointsFishingEquipment++;
+            }
+            if(i>35 && i<=47){
+                pointsHandlingOfCouthFish++;
+            }
+            if(i>47 && i<=59){
+                pointsLaw++;
+            }
+        }
+    }
+
+    correctAnswerResult.textContent = points;
+    fischBuildResults.textContent = ` ${pointsFischBuild} (${(pointsFischBuild/12 * 100).toFixed(2)}%)`; // format: (100.00%)
+    waterProtectionResults.textContent = ` ${pointsWaterProtection} (${(pointsWaterProtection/12 * 100).toFixed(2)}%)`;
+    fischingEquipmentResults.textContent = ` ${pointsFishingEquipment} (${(pointsFishingEquipment/12 * 100).toFixed(2)}%)`;
+    handlingOfCoughtFishResults.textContent = ` ${pointsHandlingOfCouthFish} (${(pointsHandlingOfCouthFish/12 * 100).toFixed(2)}%)`;
+    lawResults.textContent =  ` ${pointsLaw} (${(pointsLaw/12 * 100).toFixed(2)}%)`;
+
+    $('#test-answer-modal').modal();
+}
+
+checkTestButton.addEventListener('click',checkTest);
 
 prepareTest()

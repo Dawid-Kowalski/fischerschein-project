@@ -11,6 +11,7 @@
     <div id='test'>Loading...</div>
 </div>
 <h4 class='text-center'>{{ test_page_other_question_txt_de }}</h4>
+
 <div class='row text-center m-2 p-2 account-bg'>
     <div class='col'>
         <button class='btn btn-secondary' type='button' id='show-topic-1-questions-btn'><i class='fas fa-fish'></i> {{ test_page_ichtyology_btn_txt_de }}</button>
@@ -28,6 +29,32 @@
         <button class='btn btn-secondary' type='button' id='show-topic-5-questions-btn'><i class='fas fa-gavel'></i> {{ test_page_relevant_legislation_btn_txt_de }}</button>
     </div>
 </div>
+
+<div class='modal fade' id='test-answer-modal' tabindex='-1' role='dialog' aria-labelledby='test-answer-modal-label' aria-hidden='true'>
+    <div class='modal-dialog' role='document'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <h5 class='modal-title' id='test-answer-modal-label'>{{ test_page_modal_results_title_btn_txt_de }}</h5>
+          <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+            <span aria-hidden='true'>&times;</span>
+          </button>
+        </div>
+        <div class='modal-body'>
+            <p>{{ test_page_modal_results_correct_answer_txt_de }} <span id='correct-answer-result'>0</span></p>
+            <p>{{ test_page_modal_ichtyology_txt_de }}: <span id='fisch-build-results'>0</span></p>
+            <p>{{ test_page_modal_maintenace_of_fish_water_txt_de }}: <span id='water-protection-results'>0</span></p>
+            <p>{{ test_page_modal_fishing_gear_txt_de }}: <span id='fisching-equipment-results'>0</span></p>
+            <p>{{ test_page_modal_treatment_of_cathing_fish_txt_de }}: <span id='handling-of-caught-fish-results'>0</span></p>
+            <p>{{ test_page_modal_relevant_legislation_txt_de }}: <span id='law-results'>0</span></p>
+        </div>
+        <div class='modal-footer'>
+            <button type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-copy'></i> {{ test_page_modal_try_again_btn_txt_de }}</button>
+            <button id='new-test-in-modal-btn' type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-check-circle'></i> {{ test_page_modal_new_test_btn_txt_de }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 {% endblock %}
 
 {% block javascript %}
