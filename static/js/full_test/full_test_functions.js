@@ -77,6 +77,21 @@ prepareDataQuestionToTemplate = () => {
     return dataToTemplate
 }
 
+hideAllQuestions = () => {
+    const allQuestionsDivs = document.querySelectorAll('div[data-topic]');
+    for(let i=0;i<allQuestionsDivs.length;i++){
+        allQuestionsDivs[i].style.display = 'none';
+    }
+}
+
+showQuestionFromTopic = (topic) => {
+    hideAllQuestions();
+    const questionToShow = document.querySelectorAll(`div[data-topic="${topic}"]`);
+    for(let i=0;i<questionToShow.length;i++){
+        questionToShow[i].style.display = 'block';
+    }
+}
+
 renderQuestions = () => {
     const questionTemplate = document.querySelector('#template-question').innerHTML;
     const data = prepareDataQuestionToTemplate();
@@ -97,6 +112,42 @@ makeTooltips = () => {
 prepareTest = () => {
     renderQuestions();
     makeTooltips();
+    hideAllQuestions();
+    showQuestionFromTopic('Fischkunde und -hege');
 }
+
+const newTestButton = document.querySelector('#new-test-btn');
+const showQuestions_1_Button = document.querySelector('#show-topic-1-questions-btn')
+const showQuestions_2_Button = document.querySelector('#show-topic-2-questions-btn')
+const showQuestions_3_Button = document.querySelector('#show-topic-3-questions-btn')
+const showQuestions_4_Button = document.querySelector('#show-topic-4-questions-btn')
+const showQuestions_5_Button = document.querySelector('#show-topic-5-questions-btn')
+
+newTestButton.addEventListener('click',prepareTest);
+
+showQuestions_1_Button.addEventListener('click',function(){
+        showQuestionFromTopic('Fischkunde und -hege')
+    }
+);
+
+showQuestions_2_Button.addEventListener('click',function(){
+        showQuestionFromTopic('Pflege der Fischgewässer')
+    }
+);
+
+showQuestions_3_Button.addEventListener('click',function(){
+        showQuestionFromTopic('Fanggeräte und deren Gebrauch')
+    }
+);
+
+showQuestions_4_Button.addEventListener('click',function(){
+        showQuestionFromTopic('Behandlung der gefangenen Fische')
+    }
+);
+
+showQuestions_5_Button.addEventListener('click',function(){
+        showQuestionFromTopic('Einschlägige Rechtsvorschriften')
+    }
+);
 
 prepareTest()
