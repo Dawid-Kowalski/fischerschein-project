@@ -225,4 +225,7 @@ checkTest = () => {
 
 checkTestButton.addEventListener('click',checkTest);
 
+const newTestInModalBtn = document.querySelector('#new-test-in-modal-btn');
+newTestInModalBtn.addEventListener('click',prepareTest);
+
 prepareTest()

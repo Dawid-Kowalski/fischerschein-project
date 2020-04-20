@@ -5,7 +5,7 @@
     <h6 data-translate-flag='true'>aby uzyskać tłumaczenie na język polski najedź myszką na ikonę: <span class='flag-icon flag-icon-pl'></span> znajdującą się obok pytania lub odpowiedzi</h6>
     <button class='btn btn-secondary' type='button' id='new-test-btn'><i class="far fa-file"></i> {{ test_page_new_test_btn_txt_de }}</button>
     <button class='btn btn-secondary' type='button' id='check-test-btn'><i class="fas fa-tasks"></i> {{ test_page_check_test_btn_txt_de }}</button>
-    <button class='btn btn-secondary' type='button' data-toggle="modal" data-target='#test-info-modal' id='check-test-btn'><i class="fas fa-info"></i> {{ test_page_test_info_btn_txt_de }}</button>
+    <button class='btn btn-secondary' type='button' data-toggle='modal' data-target='#test-info-modal'><i class='fas fa-info'></i> {{ test_page_test_info_btn_txt_de }}</button>
 </div>
 <div>
     <div id='test'>Loading...</div>
@@ -50,6 +50,25 @@
         <div class='modal-footer'>
             <button type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-copy'></i> {{ test_page_modal_try_again_btn_txt_de }}</button>
             <button id='new-test-in-modal-btn' type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-check-circle'></i> {{ test_page_modal_new_test_btn_txt_de }}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='modal fade' id='test-info-modal' tabindex='-1' role='dialog' aria-labelledby='test-info-modal-label' aria-hidden='true'>
+    <div class='modal-dialog' role='document'>
+      <div class='modal-content'>
+        <div class='modal-header'>
+          <h5 class='modal-title' id='test-info-modal-label'>{{ test_page_modal_test_info_title_txt_de }}</h5>
+          <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+            <span aria-hidden='true'>&times;</span>
+          </button>
+        </div>
+        <div class='modal-body'>
+          {{ test_page_modal_test_info_text_txt_de }}
+        </div>
+        <div class='modal-footer'>
+          <button type='button' class='btn btn-secondary' data-dismiss='modal'>{{ test_page_modal_test_info_close_btn_txt_de }}</button>
         </div>
       </div>
     </div>
