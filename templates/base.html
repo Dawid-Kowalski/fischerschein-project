@@ -9,6 +9,7 @@
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous'>
     <link rel='stylesheet' type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href='https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css' rel='stylesheet'/>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css'>
     <link rel='stylesheet' type='text/css' href="{% static 'css/main.css' %}">
 </head>
 <body>
@@ -20,28 +21,59 @@
         <div class='collapse navbar-collapse' id='fischerschein-nav'>
             <ul class='navbar-nav mr-auto'>
                 <li class='nav-item active'>
-                    <a class='nav-item nav-link' href='{% url "simple_question" %}'><i class='far fa-comment'></i> {{ menu_simple_question_txt_de }}</a>
+                    <a class='nav-item nav-link' href='{% url "simple_question" %}'>
+                        <i class='far fa-comment'></i>
+                        <span data-translate-text-de='true'>{{ menu_simple_question_txt_de }}</span>
+                        <span data-translate-text-pl='true'>{{ menu_simple_question_txt_pl }}</span>
+                    </a>
                 </li>
                 <li class='nav-item'>
-                    <a class='nav-item nav-link' href='{% url "full_test" %}'><i class='far fa-comments'></i> {{ menu_full_test_txt_de }}</a>
+                    <a class='nav-item nav-link' href='{% url "full_test" %}'>
+                        <i class='far fa-comments'></i> 
+                        <span data-translate-text-de='true'>{{ menu_full_test_txt_de }}</span>
+                        <span data-translate-text-pl='true'>{{ menu_full_test_txt_pl }}</span>
+                    </a>
                 </li>
                 <li class='nav-item'>
-                    <a class='nav-item nav-link' href='#'><i class='fas fa-info'></i> {{ menu_fischerschein_info_txt_de }}</a>
+                    <a class='nav-item nav-link' href='#'>
+                        <i class='fas fa-info'></i>
+                        <span data-translate-text-de='true'>{{ menu_fischerschein_info_txt_de }}</span>
+                        <span data-translate-text-pl='true'>{{ menu_fischerschein_info_txt_pl }}</span>
+                    </a>
                 </li>
                 <li class='nav-item'>
-                    <a class='nav-item nav-link' href='#'><i class="far fa-clipboard"></i> {{ menu_FAQ_txt_de }}</a>
+                    <a class='nav-item nav-link' href='#'>
+                        <i class="far fa-clipboard"></i>
+                        <span data-translate-text-de='true'>{{ menu_FAQ_txt_de }}</span>
+                        <span data-translate-text-pl='true'>{{ menu_FAQ_txt_pl }}</span>
+                    </a>
                 </li>
                 <li class='nav-item'>
-                    <a class='nav-item nav-link' href='#'><i class="fas fa-user-tie"></i> {{ menu_about_project_de }}</a>
+                    <a class='nav-item nav-link' href='#'>
+                        <i class="fas fa-user-tie"></i>
+                        <span data-translate-text-de='true'>{{ menu_about_project_de }}</span>
+                        <span data-translate-text-pl='true'>{{ menu_about_project_pl }}</span>
+                    </a>
                 </li>
             </ul>
+            <div class='form-inline my-2 my-lg-0'>
+                language:
+                <select name='language' id='language-select' data-show-content='true' class='form-control selectpicker'>
+                    <option id='language-de' data-content="<span class='flag-icon flag-icon-de'>" value='de'></option>
+                    <option id='language-pl' data-content="<span class='flag-icon flag-icon-pl'>" value='pl'></option>
+                </select>
+            </div>
         </div>
     </nav>
     <div class='hero-image'>
         <div class='hero-text'>
-            <h1>{{ hero_main_txt_de }}</h1>
+            <h1>
+                <span data-translate-text-de='true'> {{ hero_main_txt_de }}</span>
+                <span data-translate-text-pl='true'> {{ hero_main_txt_pl }}</span>
+            </h1>
             <p>
-                <span>{{ hero_under_txt_de }}</span>
+                <span data-translate-text-de='true'> {{ hero_under_txt_de }}</span>
+                <span data-translate-text-pl='true'> {{ hero_under_txt_pl }}</span>
             </p>
         </div>
     </div>
@@ -51,6 +83,8 @@
     <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous'></script>
     <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'></script>
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js'></script>
+    <script src='{% static "js/base/base-functions.js" %}'></script>
 
     {% block javascript %}
     {% endblock %}
