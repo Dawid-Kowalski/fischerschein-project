@@ -1,0 +1,2 @@
+setLanguageFlag();
+makeTranslate();

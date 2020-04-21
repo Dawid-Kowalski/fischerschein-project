@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <p>Project info</p>
+{% endblock %}
+
+{% block javascript %}
+    <script src='{% static "js/helpers/helpers_functions.js" %}'></script>
+    <script src='{% static "js/project_info/project_info_functions.js" %}'></script>
+{% endblock %}

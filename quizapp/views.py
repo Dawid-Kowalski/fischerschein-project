@@ -180,3 +180,15 @@ def full_test(request):
     context = {**question_data,**header_data,**test_page_data}
 
     return render(request,'quizapp/full_test_page.html',context)
+
+def fischerschein_info(request):
+    context = {**header_data}
+    return render(request,'quizapp/fischerschein_info_page.html',context)
+
+def FAQ(request):
+    context = {**header_data}
+    return render(request,'quizapp/FAQ_page.html',context)
+
+def project_info(request):
+    context = {**header_data}
+    return render(request,'quizapp/project_info_page.html',context)
