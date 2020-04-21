@@ -2,21 +2,42 @@
 {% load static %}
 {% block content %}
     <div class='text-center m-2 p-2 account-bg'>
-        <h6 data-translate-flag='true'>aby uzyskać tłumaczenie na język polski najedź myszką na ikonę: <span class='flag-icon flag-icon-pl'></span> znajdującą się obok pytania lub odpowiedzi</h6>
-        <button class='btn btn-secondary' type='button' id='draw-new-question-btn'><i class='far fa-file'></i> {{ question_page_new_question_btn_txt_de }}</button>
-        <button class='btn btn-secondary' type='button' id='check-question-btn'><i class='fas fa-tasks'></i> {{ question_page_check_question_btn_txt_de }}</button>
+        <span data-translate-text-pl='true'><h6 data-translate-flag='true' >aby uzyskać tłumaczenie na język polski najedź myszką na ikonę: <span class='flag-icon flag-icon-pl'></span> znajdującą się obok pytania lub odpowiedzi</h6></span>
+        <button class='btn btn-secondary' type='button' id='draw-new-question-btn'>
+            <i class='far fa-file'></i> 
+            <span data-translate-text-de='true'> {{ question_page_new_question_btn_txt_de }}</span>
+            <span data-translate-text-pl='true'> {{ question_page_new_question_btn_txt_pl }}</span>
+        </button>
+        <button class='btn btn-secondary' type='button' id='check-question-btn'>
+            <i class='fas fa-tasks'></i>
+            <span data-translate-text-de='true'> {{ question_page_check_question_btn_txt_de }} </span>
+            <span data-translate-text-pl='true'> {{ question_page_check_question_btn_txt_pl }}</span>
+        </button>
         <p>
-            <span class='font-weight-bold'>{{ question_page_topic_txt_de }}:</span>
+            <span class='font-weight-bold'>
+                <span data-translate-text-de='true'> {{ question_page_topic_txt_de }}:</span>
+                <span data-translate-text-pl='true'> {{ question_page_topic_txt_pl }}:</span>
+            </span>
             <span id='main-topic-de'>...</span>
-            <span id='main-topic-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span><br>
-            <span class='font-weight-bold'>{{ question_page_under_topic_txt_de }}:</span>
+            <span data-translate-text-pl='true'>
+                <span id='main-topic-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+            </span>
+            <br>
+            <span class='font-weight-bold'>
+                <span data-translate-text-de='true'> {{ question_page_under_topic_txt_de }}:</span>
+                <span data-translate-text-pl='true'> {{ question_page_under_topic_txt_pl }}:</span>
+            </span>
             <span id='under-topic-de'>...</span>
-            <span id='under-topic-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+            <span data-translate-text-pl='true'>
+                <span id='under-topic-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+            </span>
         </p>
     </div>
     <div class='account-bg m-2 p-2'>
         <div class='text-center'>
-            <p>{{ question_page_question_header_txt_de }}:
+            <p>
+                <span data-translate-text-de='true'> {{ question_page_question_header_txt_de }}:</span>
+                <span data-translate-text-pl='true'> {{ question_page_question_header_txt_pl }}:</span>
                 <span id='question-id'>
                     ...
                 </span>
@@ -25,7 +46,7 @@
                 <span id='question-de'>
                     ...
                 </span>
-                <span id='question-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'>
+                <span id='question-pl' data-translate-text-pl='true' data-translate-flag='true' data-toggle='tooltip' data-placement='top'>
                     <span class='flag-icon flag-icon-pl'></span>
                 </span>
             </p>
@@ -37,7 +58,9 @@
                     <label class='form-check-label' for='answer-A' id='answer-A-label'>
                         ...
                     </label>
-                    <span id='answer-A-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+                    <span  data-translate-text-pl='true' >
+                        <span id='answer-A-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+                    </span>
                 </div>
             </div>
             <div class='form-check'>
@@ -46,7 +69,9 @@
                     <label class='form-check-label' for='answer-B' id='answer-B-label'>
                         ...
                     </label>
-                    <span id='answer-B-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+                    <span  data-translate-text-pl='true' >
+                        <span id='answer-B-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+                    </span>
                 </div>
             </div>
             <div class='form-check'>
@@ -55,7 +80,9 @@
                     <label class='form-check-label' for='answer-C' id='answer-C-label'>
                         ...
                     </label>
-                    <span id='answer-C-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+                    <span  data-translate-text-pl='true' >
+                        <span id='answer-C-pl' class='flag-icon flag-icon-pl' data-translate-flag='true' data-toggle='tooltip' data-placement='top'></span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -65,7 +92,10 @@
         <div class='modal-dialog modal-xl' role='document'>
             <div class='modal-content'>
                 <div class='modal-header'>
-                    <h5 class='modal-title' id='check-question-label'>{{ question_page_modal_title_txt_de }}</h5>
+                    <h5 class='modal-title' id='check-question-label'>
+                        <span data-translate-text-de='true'> {{ question_page_modal_title_txt_de }}:</span>
+                        <span data-translate-text-pl='true'> {{ question_page_modal_title_txt_pl }}:</span>
+                    </h5>
                     <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -75,9 +105,21 @@
                     <p id='correct-answer-modal-body'></p>
                 </div>
                 <div class='modal-footer'>
-                    <button type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-copy'></i> {{ question_page_modal_try_again_btn_txt_de }}</button>
-                    <button id='modal-correct-answer-btn' type='button' class='btn btn-secondary'><i class='far fa-check-circle'></i>{{ question_page_modal_correct_answer_btn_txt_de }}</button>
-                    <button id='modal-new-question-btn' type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-file'></i> {{ question_page_modal_new_question_btn_txt_de }}</button>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>
+                        <i class='far fa-copy'></i>
+                        <span data-translate-text-de='true'> {{ question_page_modal_try_again_btn_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ question_page_modal_try_again_btn_txt_pl }}</span>
+                    </button>
+                    <button id='modal-correct-answer-btn' type='button' class='btn btn-secondary'>
+                        <i class='far fa-check-circle'></i>
+                        <span data-translate-text-de='true'> {{ question_page_modal_correct_answer_btn_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ question_page_modal_correct_answer_btn_txt_pl }}</span>
+                    </button>
+                    <button id='modal-new-question-btn' type='button' class='btn btn-secondary' data-dismiss='modal'>
+                        <i class='far fa-file'></i> 
+                        <span data-translate-text-de='true'> {{ question_page_modal_new_question_btn_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ question_page_modal_new_question_btn_txt_pl }}</span>
+                    </button>
                 </div>
              </div>
         </div>

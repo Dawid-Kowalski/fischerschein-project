@@ -74,7 +74,7 @@ def main_page(request):
     main_page_data['main_page_about_me_title_txt_de'] = main_page_txt[0].main_page_about_me_title_txt_de
     main_page_data['main_page_about_me_title_txt_pl'] = main_page_txt[0].main_page_about_me_title_txt_pl
     main_page_data['main_page_about_me_text_txt_de'] = main_page_txt[0].main_page_about_me_text_txt_de
-    main_page_data[' main_page_about_me_text_txt_pl'] = main_page_txt[0].main_page_about_me_text_txt_pl
+    main_page_data['main_page_about_me_text_txt_pl'] = main_page_txt[0].main_page_about_me_text_txt_pl
 
     context = {**header_data, **main_page_data}
 

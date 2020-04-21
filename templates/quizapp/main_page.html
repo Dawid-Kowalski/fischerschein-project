@@ -5,24 +5,75 @@
         <div class='row'>
             <div class='col-12 col-sm-6 text-center mb-4 mt-4 d-flex'>
                 <div class='col-md-12 border p-3 account-bg'>
-                    <h3>{{ main_page_without_account_title_txt_de }}</h3>
-                    <p><i class='fas fa-hand-point-right'></i> {{ main_page_without_account_benefit_1_txt_de }}</p>
-                    <p><i class='fas fa-hand-point-right'></i> {{ main_page_without_account_benefit_2_txt_de }}</p>
-                    <p><i class='fas fa-hand-point-right'></i> {{ main_page_without_account_benefit_3_txt_de }}</p>
-                    <a href='{% url "simple_question" %}' class='btn btn-secondary'><i class='far fa-comment'></i> {{ main_page_without_account_single_question_btn_txt_de }}</a>
-                    <a href='{% url "full_test" %}' class='btn btn-secondary'><i class='far fa-comments'></i> {{  main_page_without_account_full_test_btn_txt_de }}</a>
+                    <h3>
+                        <span data-translate-text-de='true'> {{ main_page_without_account_title_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_without_account_title_txt_pl }}</span>
+                    </h3>
+                    <p>
+                        <i class='fas fa-hand-point-right'></i> 
+                        <span data-translate-text-de='true'> {{ main_page_without_account_benefit_1_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_without_account_benefit_1_txt_pl }}</span>
+                    </p>
+                    <p>
+                        <i class='fas fa-hand-point-right'></i>
+                        <span data-translate-text-de='true'> {{ main_page_without_account_benefit_2_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_without_account_benefit_2_txt_pl }}</span>
+                    </p>
+                    <p>
+                        <i class='fas fa-hand-point-right'></i>
+                        <span data-translate-text-de='true'> {{ main_page_without_account_benefit_3_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_without_account_benefit_3_txt_pl }}</span>
+                    </p>
+                    <a href='{% url "simple_question" %}' class='btn btn-secondary'>
+                        <i class='far fa-comment'></i>
+                        <span data-translate-text-de='true'>  {{ main_page_without_account_single_question_btn_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_without_account_single_question_btn_txt_pl }}</span>
+                    </a>
+                    <a href='{% url "full_test" %}' class='btn btn-secondary'>
+                        <i class='far fa-comments'></i>
+                        <span data-translate-text-de='true'>  {{ main_page_without_account_full_test_btn_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_without_account_full_test_btn_txt_pl }}</span>
+                    </a>
                 </div>
             </div>
             <div class='col-12 col-sm-6 text-center mb-4 mt-4 d-flex'>
                 <div class='col-md-12 border p-3 account-bg'>
-                    <h3>{{ main_page_with_account_title_txt_de }}</h3>
-                    <p><i class='fas fa-hand-point-right'></i> {{ main_page_with_account_benefit_1_txt_de }}</p>
-                    <p><i class='fas fa-hand-point-right'></i> {{ main_page_with_account_benefit_2_txt_de }}</p>
-                    <p><i class='fas fa-hand-point-right'></i> {{ main_page_with_account_benefit_3_txt_de }}</p>
-                    <p><i class='fas fa-hand-point-right'></i> {{ main_page_with_account_benefit_4_txt_de }}</p>
-                    <p><i class='fas fa-hand-point-right'></i> {{ main_page_with_account_benefit_5_txt_de }}</p>
-                    <a href='#' class='btn btn-secondary'><i class='fas fa-user-plus'></i> {{ main_page_with_account_make_account_btn_txt_de }}</a>
-                    <a href='#' class='btn btn-secondary'><i class='fas fa-user-check'></i> {{ main_page_with_account_login_btn_txt_de }}</a>
+                    <h3>
+                        <span data-translate-text-de='true'> {{ main_page_with_account_title_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_with_account_title_txt_pl }}</span>
+                    </h3>
+                    <p>
+                        <i class='fas fa-hand-point-right'></i>
+                        <span data-translate-text-de='true'>  {{ main_page_with_account_benefit_1_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_with_account_benefit_1_txt_pl }}</span>
+                    </p>
+                    <p>
+                        <i class='fas fa-hand-point-right'></i>
+                        <span data-translate-text-de='true'>  {{ main_page_with_account_benefit_2_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_with_account_benefit_2_txt_pl }}</span>
+                    </p>
+                    <p>
+                        <i class='fas fa-hand-point-right'></i>
+                        <span data-translate-text-de='true'>  {{ main_page_with_account_benefit_3_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_with_account_benefit_3_txt_pl }}</span>
+                    </p>
+                    <p>
+                        <i class='fas fa-hand-point-right'></i>
+                        <span data-translate-text-de='true'>  {{ main_page_with_account_benefit_4_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_with_account_benefit_4_txt_pl }}</span>
+                    </p>                    <p>
+                        <i class='fas fa-hand-point-right'></i>
+                        <span data-translate-text-de='true'>  {{ main_page_with_account_benefit_5_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_with_account_benefit_5_txt_pl }}</span>
+                    </p>
+                    <a href='#' class='btn btn-secondary'><i class='fas fa-user-plus'></i>
+                        <span data-translate-text-de='true'>  {{ main_page_with_account_make_account_btn_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_with_account_make_account_btn_txt_pl }}</span>
+                    </a>
+                    <a href='#' class='btn btn-secondary'><i class='fas fa-user-check'></i>
+                        <span data-translate-text-de='true'>  {{ main_page_with_account_login_btn_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_with_account_login_btn_txt_pl }}</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -31,22 +82,40 @@
                 <span class='icon-benefit'>
                     <i class='fas fa-chart-line'></i>
                 </span>
-                <h4>{{ main_page_benefit_1_main_txt_de }}</h4>
-                <p>{{ main_page_benefit_1_under_txt_de }}</p>
+                <h4>
+                    <span data-translate-text-de='true'>  {{ main_page_benefit_1_main_txt_de }}</span>
+                    <span data-translate-text-pl='true'> {{ main_page_benefit_1_main_txt_pl }}</span>
+                </h4>
+                <p>
+                    <span data-translate-text-de='true'>  {{ main_page_benefit_1_under_txt_de }}</span>
+                    <span data-translate-text-pl='true'> {{ main_page_benefit_1_under_txt_pl }}</span>
+                </p>
             </div>
             <div class='col'>
                 <span class='icon-benefit'>
                     <i class='fas fa-walking'></i>
                 </span>
-                <h4>{{ main_page_benefit_2_main_txt_de }}</h4>
-                <p>{{ main_page_benefit_2_under_txt_de }}</p>
+                <h4>
+                    <span data-translate-text-de='true'>  {{ main_page_benefit_2_main_txt_de }}</span>
+                    <span data-translate-text-pl='true'> {{ main_page_benefit_2_main_txt_pl }}</span>
+                </h4>
+                <p>
+                    <span data-translate-text-de='true'>  {{ main_page_benefit_2_under_txt_de }}</span>
+                    <span data-translate-text-pl='true'> {{ main_page_benefit_2_under_txt_pl }}</span>
+                </p>
             </div>
             <div class='col'>
                 <span class='icon-benefit'>
                     <i class='fas fa-mobile-alt'></i>
                 </span>
-                <h4>{{ main_page_benefit_3_main_txt_de }}</h4>
-                <p>{{ main_page_benefit_3_under_txt_de }}</p>
+                <h4>
+                    <span data-translate-text-de='true'>  {{ main_page_benefit_3_main_txt_de }}</span>
+                    <span data-translate-text-pl='true'> {{ main_page_benefit_3_main_txt_pl }}</span>
+                </h4>
+                <p>
+                    <span data-translate-text-de='true'>  {{ main_page_benefit_3_under_txt_de }}</span>
+                    <span data-translate-text-pl='true'> {{ main_page_benefit_3_under_txt_pl }}</span>
+                </p>
             </div>
         </div>
         <div class='row m-2 account-bg'>
@@ -55,9 +124,13 @@
             </div>
             <div class='col-12 col-md-8 d-flex'>
                 <div class='align-self-center mx-auto'>
-                    <h4>{{ main_page_about_me_title_txt_de }}</h4>
+                    <h4>
+                        <span data-translate-text-de='true'>  {{ main_page_about_me_title_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_about_me_title_txt_pl }}</span>
+                    </h4>
                     <p>
-                        {{ main_page_about_me_text_txt_de }}
+                        <span data-translate-text-de='true'>  {{ main_page_about_me_text_txt_de }}</span>
+                        <span data-translate-text-pl='true'> {{ main_page_about_me_text_txt_pl }}</span>
                     </p>
                 </div>
             </div>
