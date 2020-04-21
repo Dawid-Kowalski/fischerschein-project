@@ -2,31 +2,66 @@
 {% load static %}
 {% block content %}
 <div class='text-center m-2 p-2 account-bg'>
-    <h6 data-translate-flag='true'>aby uzyskać tłumaczenie na język polski najedź myszką na ikonę: <span class='flag-icon flag-icon-pl'></span> znajdującą się obok pytania lub odpowiedzi</h6>
-    <button class='btn btn-secondary' type='button' id='new-test-btn'><i class="far fa-file"></i> {{ test_page_new_test_btn_txt_de }}</button>
-    <button class='btn btn-secondary' type='button' id='check-test-btn'><i class="fas fa-tasks"></i> {{ test_page_check_test_btn_txt_de }}</button>
-    <button class='btn btn-secondary' type='button' data-toggle='modal' data-target='#test-info-modal'><i class='fas fa-info'></i> {{ test_page_test_info_btn_txt_de }}</button>
+    <span data-translate-text-pl='true'><h6 data-translate-flag='true'>aby uzyskać tłumaczenie na język polski najedź myszką na ikonę: <span class='flag-icon flag-icon-pl'></span> znajdującą się obok pytania lub odpowiedzi</h6></span>
+    <button class='btn btn-secondary' type='button' id='new-test-btn'>
+      <i class="far fa-file"></i>
+      <span data-translate-text-de='true'> {{ test_page_new_test_btn_txt_de }}</span>
+      <span data-translate-text-pl='true'> {{ test_page_new_test_btn_txt_pl }}</span>
+    </button>
+    <button class='btn btn-secondary' type='button' id='check-test-btn'>
+      <i class="fas fa-tasks"></i> 
+      <span data-translate-text-de='true'> {{ test_page_check_test_btn_txt_de }}</span>
+      <span data-translate-text-pl='true'> {{ test_page_check_test_btn_txt_pl }}</span>
+    </button>
+    <button class='btn btn-secondary' type='button' data-toggle='modal' data-target='#test-info-modal'>
+      <i class='fas fa-info'></i>
+      <span data-translate-text-de='true'> {{ test_page_test_info_btn_txt_de }}</span>
+      <span data-translate-text-pl='true'> {{ test_page_test_info_btn_txt_pl }}</span>
+    </button>
 </div>
 <div>
     <div id='test'>Loading...</div>
 </div>
-<h4 class='text-center'>{{ test_page_other_question_txt_de }}</h4>
+<h4 class='text-center'>
+  <span data-translate-text-de='true'> {{ test_page_other_question_txt_de }}</span>
+  <span data-translate-text-pl='true'> {{ test_page_other_question_txt_pl }}</span>
+</h4>
 
 <div class='row text-center m-2 p-2 account-bg'>
     <div class='col'>
-        <button class='btn btn-secondary' type='button' id='show-topic-1-questions-btn'><i class='fas fa-fish'></i> {{ test_page_ichtyology_btn_txt_de }}</button>
+        <button class='btn btn-secondary' type='button' id='show-topic-1-questions-btn'>
+          <i class='fas fa-fish'></i> 
+          <span data-translate-text-de='true'> {{ test_page_ichtyology_btn_txt_de }}</span>
+          <span data-translate-text-pl='true'> {{ test_page_ichtyology_btn_txt_pl }}</span>
+        </button>
     </div>
     <div class='col'>
-        <button class='btn btn-secondary' type='button' id='show-topic-2-questions-btn'><i class='fas fa-hand-holding-water'></i> {{ test_page_maintenace_of_fish_water_btn_txt_de }}</button>
+        <button class='btn btn-secondary' type='button' id='show-topic-2-questions-btn'>
+          <i class='fas fa-hand-holding-water'></i>
+          <span data-translate-text-de='true'> {{ test_page_maintenace_of_fish_water_btn_txt_de }}</span>
+          <span data-translate-text-pl='true'> {{ test_page_maintenace_of_fish_water_btn_txt_pl }}</span>
+        </button>
     </div>
     <div class='col'>
-        <button class='btn btn-secondary' type='button' id='show-topic-3-questions-btn'><i class='fas fa-fist-raised'></i> {{ test_page_fishing_gear_btn_txt_de }}</button>
+        <button class='btn btn-secondary' type='button' id='show-topic-3-questions-btn'>
+          <i class='fas fa-fist-raised'></i>
+          <span data-translate-text-de='true'> {{ test_page_fishing_gear_btn_txt_de }}</span>
+          <span data-translate-text-pl='true'> {{ test_page_fishing_gear_btn_txt_pl }}</span>
+        </button>
     </div>
     <div class='col'>
-        <button class='btn btn-secondary' type='button' id='show-topic-4-questions-btn'><i class='fas fa-shopping-basket'></i> {{ test_page_treatment_of_cathing_fish_btn_txt_de }}</button>
+        <button class='btn btn-secondary' type='button' id='show-topic-4-questions-btn'>
+          <i class='fas fa-shopping-basket'></i>
+          <span data-translate-text-de='true'> {{ test_page_treatment_of_cathing_fish_btn_txt_de }}</span>
+          <span data-translate-text-pl='true'> {{ test_page_treatment_of_cathing_fish_btn_txt_pl }}</span>
+        </button>
     </div>
     <div class='col'>
-        <button class='btn btn-secondary' type='button' id='show-topic-5-questions-btn'><i class='fas fa-gavel'></i> {{ test_page_relevant_legislation_btn_txt_de }}</button>
+        <button class='btn btn-secondary' type='button' id='show-topic-5-questions-btn'>
+          <i class='fas fa-gavel'></i>
+          <span data-translate-text-de='true'> {{ test_page_relevant_legislation_btn_txt_de }}</span>
+          <span data-translate-text-pl='true'> {{ test_page_relevant_legislation_btn_txt_pl }}</span>
+        </button>
     </div>
 </div>
 
@@ -34,22 +69,57 @@
     <div class='modal-dialog' role='document'>
       <div class='modal-content'>
         <div class='modal-header'>
-          <h5 class='modal-title' id='test-answer-modal-label'>{{ test_page_modal_results_title_btn_txt_de }}</h5>
+          <h5 class='modal-title' id='test-answer-modal-label'>
+            <span data-translate-text-de='true'>  {{ test_page_modal_results_title_btn_txt_de }}</span>
+            <span data-translate-text-pl='true'>  {{ test_page_modal_results_title_btn_txt_pl }}</span>
+          </h5>
           <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
             <span aria-hidden='true'>&times;</span>
           </button>
         </div>
         <div class='modal-body'>
-            <p>{{ test_page_modal_results_correct_answer_txt_de }} <span id='correct-answer-result'>0</span></p>
-            <p>{{ test_page_modal_ichtyology_txt_de }}: <span id='fisch-build-results'>0</span></p>
-            <p>{{ test_page_modal_maintenace_of_fish_water_txt_de }}: <span id='water-protection-results'>0</span></p>
-            <p>{{ test_page_modal_fishing_gear_txt_de }}: <span id='fisching-equipment-results'>0</span></p>
-            <p>{{ test_page_modal_treatment_of_cathing_fish_txt_de }}: <span id='handling-of-caught-fish-results'>0</span></p>
-            <p>{{ test_page_modal_relevant_legislation_txt_de }}: <span id='law-results'>0</span></p>
+            <p>
+              <span data-translate-text-de='true'>  {{ test_page_modal_results_correct_answer_txt_de }}:</span>
+              <span data-translate-text-pl='true'>  {{ test_page_modal_results_correct_answer_txt_pl }}:</span>
+              <span id='correct-answer-result'>0</span>
+            </p>
+            <p>
+              <span data-translate-text-de='true'>  {{ test_page_modal_ichtyology_txt_de }}:</span>
+              <span data-translate-text-pl='true'>  {{ test_page_modal_ichtyology_txt_pl }}:</span>
+              <span id='fisch-build-results'>0</span>
+            </p>
+            <p>
+              <span data-translate-text-de='true'>  {{ test_page_modal_maintenace_of_fish_water_txt_de }}:</span>
+              <span data-translate-text-pl='true'>  {{ test_page_modal_maintenace_of_fish_water_txt_pl }}:</span>
+              <span id='water-protection-results'>0</span>
+            </p>
+            <p>
+              <span data-translate-text-de='true'>  {{ test_page_modal_fishing_gear_txt_de }}:</span>
+              <span data-translate-text-pl='true'>  {{ test_page_modal_fishing_gear_txt_pl}}:</span>
+              <span id='fisching-equipment-results'>0</span>
+            </p>
+            <p>
+              <span data-translate-text-de='true'>   {{ test_page_modal_treatment_of_cathing_fish_txt_de }}:</span>
+              <span data-translate-text-pl='true'>   {{ test_page_modal_treatment_of_cathing_fish_txt_pl }}:</span>
+              <span id='handling-of-caught-fish-results'>0</span>
+            </p>
+            <p>
+              <span data-translate-text-de='true'>  {{ test_page_modal_relevant_legislation_txt_de }}:</span>
+              <span data-translate-text-pl='true'>  {{ test_page_modal_relevant_legislation_txt_pl }}:</span>
+              <span id='law-results'>0</span>
+            </p>
         </div>
         <div class='modal-footer'>
-            <button type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-copy'></i> {{ test_page_modal_try_again_btn_txt_de }}</button>
-            <button id='new-test-in-modal-btn' type='button' class='btn btn-secondary' data-dismiss='modal'><i class='far fa-check-circle'></i> {{ test_page_modal_new_test_btn_txt_de }}</button>
+            <button type='button' class='btn btn-secondary' data-dismiss='modal'>
+              <i class='far fa-copy'></i>
+              <span data-translate-text-de='true'>  {{ test_page_modal_try_again_btn_txt_de }}</span>
+              <span data-translate-text-pl='true'>  {{ test_page_modal_try_again_btn_txt_pl }}</span>
+            </button>
+            <button id='new-test-in-modal-btn' type='button' class='btn btn-secondary' data-dismiss='modal'>
+              <i class='far fa-check-circle'></i>
+              <span data-translate-text-de='true'>  {{ test_page_modal_new_test_btn_txt_de }}</span>
+              <span data-translate-text-pl='true'>  {{ test_page_modal_new_test_btn_txt_pl }}</span>
+            </button>
         </div>
       </div>
     </div>
@@ -59,16 +129,23 @@
     <div class='modal-dialog' role='document'>
       <div class='modal-content'>
         <div class='modal-header'>
-          <h5 class='modal-title' id='test-info-modal-label'>{{ test_page_modal_test_info_title_txt_de }}</h5>
+          <h5 class='modal-title' id='test-info-modal-label'>
+            <span data-translate-text-de='true'>  {{ test_page_modal_test_info_title_txt_de }}</span>
+            <span data-translate-text-pl='true'>  {{ test_page_modal_test_info_title_txt_pl }}</span>
+          </h5>
           <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
             <span aria-hidden='true'>&times;</span>
           </button>
         </div>
         <div class='modal-body'>
-          {{ test_page_modal_test_info_text_txt_de }}
+          <span data-translate-text-de='true'>  {{ test_page_modal_test_info_text_txt_de }}</span>
+          <span data-translate-text-pl='true'>  {{ test_page_modal_test_info_text_txt_pl }}</span>
         </div>
         <div class='modal-footer'>
-          <button type='button' class='btn btn-secondary' data-dismiss='modal'>{{ test_page_modal_test_info_close_btn_txt_de }}</button>
+          <button type='button' class='btn btn-secondary' data-dismiss='modal'>
+            <span data-translate-text-de='true'>  {{ test_page_modal_test_info_close_btn_txt_de }}</span>
+            <span data-translate-text-pl='true'>  {{ test_page_modal_test_info_close_btn_txt_pl }}</span>
+          </button>
         </div>
       </div>
     </div>
@@ -87,22 +164,30 @@
                 <p>
                     <span id='question-nr'>{% templatetag openvariable %} questionId {% templatetag closevariable %}</span>
                     <span id='question-de'>{% templatetag openvariable %} questionDe {% templatetag closevariable %}</span>
-                    <span class='flag-icon flag-icon-pl m-1' data-toggle='tooltip' data-placement='top' data-translate-flag='true' id='question-{% templatetag openvariable %}questionId{% templatetag closevariable %}-pl' data-original-title='' title='{% templatetag openvariable %} questionPl {% templatetag closevariable %}'></span>
+                    <span data-translate-text-pl='true'>
+                      <span class='flag-icon flag-icon-pl m-1' data-toggle='tooltip' data-placement='top' data-translate-flag='true' id='question-{% templatetag openvariable %}questionId{% templatetag closevariable %}-pl' data-original-title='' title='{% templatetag openvariable %} questionPl {% templatetag closevariable %}'></span>
+                    </span>
                 </p>
                 <div class='form-check'>
                     <input type='radio' value='{% templatetag openvariable %} answerAde {% templatetag closevariable %}' class='form-check-input' name='answer-{% templatetag openvariable %}questionId{% templatetag closevariable %}'>
                     <label class='form-check-label'>{% templatetag openvariable %} answerAde {% templatetag closevariable %}</label>
-                    <span class='flag-icon flag-icon-pl m-1' data-translate-flag='true' data-toggle='tooltip' data-placement='top' id='answer-1-0' data-original-title='' title='{% templatetag openvariable %} answerApl {% templatetag closevariable %}'></span>
+                    <span data-translate-text-pl='true'>
+                      <span class='flag-icon flag-icon-pl m-1' data-translate-flag='true' data-toggle='tooltip' data-placement='top' id='answer-1-0' data-original-title='' title='{% templatetag openvariable %} answerApl {% templatetag closevariable %}'></span>
+                    </span>
                 </div>
                 <div class='form-check'>
                     <input type='radio' value='{% templatetag openvariable %} answerBde {% templatetag closevariable %}' class='form-check-input' name='answer-{% templatetag openvariable %}questionId{% templatetag closevariable %}'>
                     <label class='form-check-label'>{% templatetag openvariable %} answerBde {% templatetag closevariable %}</label>
-                    <span class='flag-icon flag-icon-pl m-1' data-translate-flag='true' data-toggle='tooltip' data-placement='top' id='answer-1-1' data-original-title='' title='{% templatetag openvariable %} answerBpl {% templatetag closevariable %}'></span>
+                    <span data-translate-text-pl='true'>
+                      <span class='flag-icon flag-icon-pl m-1' data-translate-flag='true' data-toggle='tooltip' data-placement='top' id='answer-1-1' data-original-title='' title='{% templatetag openvariable %} answerBpl {% templatetag closevariable %}'></span>
+                    </span>
                 </div>
                 <div class='form-check'>
                     <input type='radio' value='{% templatetag openvariable %} answerCde {% templatetag closevariable %}' class='form-check-input' name='answer-{% templatetag openvariable %}questionId{% templatetag closevariable %}'>
                     <label class='form-check-label'>{% templatetag openvariable %} answerCde {% templatetag closevariable %}</label>
-                    <span class='flag-icon flag-icon-pl m-1' data-translate-flag='true' data-toggle='tooltip' data-placement='top' id='answer-1-2' data-original-title='' title='{% templatetag openvariable %} answerCpl {% templatetag closevariable %}'></span>
+                    <span data-translate-text-pl='true'>
+                      <span class='flag-icon flag-icon-pl m-1' data-translate-flag='true' data-toggle='tooltip' data-placement='top' id='answer-1-2' data-original-title='' title='{% templatetag openvariable %} answerCpl {% templatetag closevariable %}'></span>
+                    </span>
                 </div>
             </div>
             {% templatetag openvariable %} /questions {% templatetag closevariable %}

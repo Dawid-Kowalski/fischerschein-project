@@ -109,9 +109,11 @@ makeTooltips = () => {
     }
 }
 
-prepareTest = () => {
+async function prepareTest() {
     renderQuestions();
     makeTooltips();
+    //setLanguageFlag();
+    makeTranslate();
     hideAllQuestions();
     showQuestionFromTopic('Fischkunde und -hege');
 }
